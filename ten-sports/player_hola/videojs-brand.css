@@ -1,0 +1,10 @@
+/**
+ * videojs-brand
+ * @version 0.0.4
+ * @copyright 2016 Emmanuel Alves <manel.pb@gmail.com>
+ * @license MIT
+ */
+.video-js.vjs-brand{display:block}
+.vjs-brand-container{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;order:9;margin: 0 8px;}
+.vjs-brand-container-link{font-size:16px;font-family:"Quicksand",Arial,sans-serif;font-weight:bold;opacity:.9;color:#fff;}
+.vjs-brand-container-link:hover {opacity:1;color:#fff;}

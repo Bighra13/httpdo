@@ -1,0 +1,174 @@
+<html>
+<head>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-H3P17PVEMG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-H3P17PVEMG');
+</script>
+<meta name="robots" content="noindex" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand:400,500,700">
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js" integrity="sha384-kW+oWsYx3YpxvjtZjFXqazFpA7UP/MbiY4jvs+RWZo2+N94PFZ36T6TFkc9O3qoB" crossorigin="anonymous"></script>
+<link rel="stylesheet" type="text/css" src="css/main.min.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/xupload.js"></script>
+<script src="js/jquery.cookie.js"></script>
+
+<style>
+body {font-family:"Quicksand",Arial,sans-serif;font-size:14px;line-height:1.5;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+a{text-decoration:none;color:#2196F3;-webkit-transition:color .1s ease;transition:color .1s ease}a:hover{color:#1E88E5}
+.logo{font-weight:700;font-size:34px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.logo .logo-name{color:#2196F3;-webkit-text-fill-color:transparent;background:-webkit-linear-gradient(left,#2196F3,#654C9A),0 0;background:-o-linear-gradient(#2196F3,#654C9A);-webkit-background-clip:text}
+.logo .logo-domain{font-weight:400;display:inline-block;-webkit-transition:-webkit-transform .5s ease-in;transition:-webkit-transform .5s ease-in;transition:transform .5s ease-in;transition:transform .5s ease-in,-webkit-transform .5s ease-in}
+.logo .fa-play-circle{font-size:40px;margin-right:8px;-webkit-transition:-webkit-transform .5s ease-in;transition:-webkit-transform .5s ease-in;transition:transform .5s ease-in;transition:transform .5s ease-in,-webkit-transform .5s ease-in}
+.logo:hover .fa-play-circle{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+[data-watermark] .logo{font-size:20px}
+[data-watermark] .logo .fa-play-circle{font-size:27px;margin-right:4px}
+[data-watermark] .logo {display:none!important;}
+.media-control-button[data-playpause] svg {height:30px!important}
+.media-control[data-media-control] .media-control-layer[data-controls] button.media-control-button[data-fullscreen] {margin-left:0!important;}
+.media-control[data-media-control] .media-control-layer[data-controls] .media-control-indicator[data-duration], .media-control[data-media-control] .media-control-layer[data-controls] .media-control-indicator[data-position] {font-size:13px!important;font-weight:500!important;}
+</style>
+</head>
+<body topmargin="0" leftmargin="0" style="background:transparent;">
+
+    <div style="position:relative;">
+     <div id='vplayer'>
+                
+                
+                <video id="hola"
+				    class="video-js vjs-default-skin vjs-big-play-centered"
+				    width="1280" height="536"
+				    controls="true"
+					poster="ptv.jpg"
+				    preload="metadata"
+				    >
+				    
+				    autoplay
+				</video></div>
+
+<script src="player_hola/hola_player.js"></script>
+<script src="player_hola/videojs.hotkeys.min.js"></script>
+<script src="player_hola/videojs-contrib-hls.min.js"></script>
+<script src="player_hola/videojs-brand.min.js"></script>
+
+<style>
+.video-js {
+	width:100%;
+	height:100%;
+}
+.vjs-texttrack-settings {
+	display: none;
+}
+.vjs-rightclick-popup {
+	display: none;
+}
+</style>
+
+<link  href="player_hola/videojs-chromecast.css" rel="stylesheet">
+<link  href="player_hola/videojs-brand.css" rel="stylesheet">
+<script src="player_hola/videojs-chromecast.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+
+
+    </div>
+
+
+
+
+<script type='text/javascript'>var holaplayer;
+window.hola_player({ player: '#hola',
+    				share: false,
+					poster: 'ptv.jpg',
+    				sources: [{src: "http://42.201.228.226:8678/TENSPORT_EBRAVO_MOBILE/tracks-v1a1/mono.m3u8", type: "application/x-mpegURL"}],
+					preload: 'metadata',
+						thumbnails:{ vtt:'ptv.jpg' },
+				 settings: {
+          				quality: true,
+						 
+        			},
+					videojs_options: { 
+						html5: {
+							hlsjsConfig: {
+								debug: false, 
+								maxBufferLength: 30, 
+								maxBufferSize: 2*1024*1024, 
+								maxMaxBufferLength: 600, 
+								capLevelToPlayerSize: true,
+							}
+						},
+						
+chromecast:{},
+					},
+}, function(player){
+	holaplayer = player;
+		player.hotkeys({ volumeStep: 0.1, seekStep: 5, enableModifiersForNumbers: false });
+		player.brand({
+			image: "Ten Sports",
+			title: "Ten Sports",
+			destination: "https://tensportslive.tk",
+			destinationTarget: "_top"
+		});
+		var vvplay,vvad;
+
+player.on('play', function(){ doPlay(); });
+player.on('ended', function(){ $('div.video_ad').show();  });
+player.on('timeupdate',function() { 
+    if(5>0 && player.currentTime()>=5 && vvad!=1){vvad=1;$('div.video_ad_fadein').fadeIn('slow');}
+});
+function doPlay()
+{
+  $('div.video_ad').hide();
+  if(vvplay)return;
+  vvplay=1;
+  adb=0;
+  if( window.cRAds === undefined ){ adb=1; }
+  $.get(''+adb, function(data) {$('#fviews').html(data);} );
+
+  player.textTracks().on("change", function (event) { var a=this.tracks_; b=a[a.length-1]; if(b.src=="https://9hlydufdbmem9zzsvw7j2w-on.drv.tw/tv/srt/empty.vtt" && b.mode=="showing"){showCCform();} } );
+}
+
+function showCCform()
+{
+player.pause();
+
+var $dd=	$("<div />").css({
+   position: "absolute",
+    width: "100%",
+    height: "100%",
+    left: 0,
+    top: 0,
+    zIndex: 1000000,
+    background: "rgba(0,0,0,0.4)",
+    "text-align": "center"
+});
+$("<iframe />").css({
+    width: "70%",
+    height: "70%",
+    zIndex: 1000001,
+	position: "absolute",
+	top:"50%",
+	left:"50%",
+	transform:"translate(-50%,-50%)"
+}).prop({'src':'https://9hlydufdbmem9zzsvw7j2w-on.drv.tw/tv/?op=upload_srt&file_code=6fe53kn7pimb', 'frameborder':'0', 'scrolling':'no'}).appendTo($dd);
+
+ $dd.click(function (){ $(this).remove(); player.play(); });
+ $dd.appendTo( $('#vplayer') );
+}
+
+
+
+
+	player.ready(function(){
+        
+    });
+});
+
+</script>
+
+
+
+</body></html>
