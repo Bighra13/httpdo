@@ -1,0 +1,162 @@
+<HTML>
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<HEAD>
+<meta name="robots" content="noindex" />
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<script language="JavaScript" type="text/javascript" CHARSET="UTF-8" src="js/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="js/xupload.js"></script>
+<script language="JavaScript" type="text/javascript" CHARSET="UTF-8" src="js/jquery.cookie.js"></script>
+<script>
+$.cookie('file_id', '3141', { expires: 10 });
+$.cookie('aff', '2', { expires: 10 });
+
+function injectJs(url) {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.async = true;
+  script.onload = function(){
+  };
+  script.src = url;
+  document.getElementsByTagName('head')[0].appendChild(script);
+  $(".jw-spacer").html('<img src="images/ourweb.png">');
+}
+ 
+
+ $( document ).ready(function() {
+  if ($(window).width() > 599) {
+    setTimeout(function(){  $(".jw-spacer").html('<img src="images/ourweb.png">')}, 1000 * 2);
+   }
+});
+</script>
+<style>
+  .jw-spacer img{
+    width: 60px;
+    height: 23px;
+    float: right;
+    margin-top: 8px;
+  }
+  .jw-breakpoint-7 .jw-spacer img {
+    width: 70px !important;
+    height: 27px  !important;
+    float: right;
+    margin-top: 13px  !important;
+  }
+</style>
+<script type="text/javascript">
+    var wid = '538795';
+    var uid = '260001';
+</script>
+</HEAD>
+<BODY topmargin=0 leftmargin=0 style="background:transparent;">
+
+
+    <div style="position:relative;">
+    
+     
+  
+
+    <script type='text/javascript' src='player8/jwplayer.js'></script>
+                <script type="text/javascript">jwplayer.key="8AgOIWAgrl1RsFxV4/x885zL8f0Amif16rkX5tHbB18YouW0pR/SQg==";</script>
+               <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LYPSQSQ0N7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-LYPSQSQ0N7');
+</script>
+  <meta name="robots" content="noindex">
+
+                <div id='vplayer' style="width:100%;height:100%;text-align:center;"></div>
+
+    </div>
+
+
+
+
+<script type='text/javascript'>  jwplayer("vplayer").setup({
+    sources: [{file:"http://42.201.228.226:8678/TENSPORT_EBRAVO_MOBILE/tracks-v1a1/mono.m3u8"}],
+    //hlslabels:{
+    //       "1440":"1080p",
+    //       "900":"720p",
+    //       "768":"480p"
+   //},
+  
+    width: "100%", 
+    height: "100%",
+    stretching: "uniform",
+   
+    //aspectratio: "16:9",
+    preload: 'auto',
+    androidhls: "true",
+    hlshtml: "true",
+    test: "1",
+    primary: "html5",
+    startparam: "start"
+    
+  
+   
+  });
+var vvplay,vvad,x2ok=0;
+var vastdone1=0,vastdone2=0;
+var player = jwplayer();
+player.on('time', function(x) { 
+    if(5>0 && x.position>=5 && vvad!=1){vvad=1;$('div.video_ad_fadein').fadeIn('slow');}
+    if(x2ok==0 && x.position>=2862 && x.position<=(2862+2)){x2ok=x.position;}
+    
+});
+player.on('play', function(x) { doPlay(x); });
+player.on('complete', function() { $('div.video_ad').show();  });
+
+function doPlay(x)
+{
+  $('div.video_ad').show();
+  if(vvplay)return;
+  vvplay=1;
+  adb=0;
+  if( window.cRAds === undefined ){ adb=1; }
+  
+  
+  
+}
+    player.on('ready', function(){
+    		$('.jw-settings-content-item:contains("Upload")').click( function (e){
+		showCCform();
+		jwplayer().setCurrentCaptions(0);
+		jwplayer().pause(true);
+} );
+
+function showCCform()
+{
+var $dd=	$("<div />").css({
+   position: "absolute",
+    width: "100%",
+    height: "100%",
+    left: 0,
+    top: 0,
+    zIndex: 1000000,
+    background: "rgba(10%, 10%, 10%, 0.4)",
+    "text-align": "center"
+});
+$("<iframe />").css({
+    width: "60%",
+    height: "60%",
+    zIndex: 1000001,
+    "margin-top": "50px"
+}) 
+
+ $dd.click(function (){ $(this).remove(); jwplayer().play(); });
+ $dd.appendTo( $('#vplayer') );
+}
+
+
+    });
+
+
+
+
+</script>
+
+</BODY>
+</HTML>
