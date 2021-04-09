@@ -1,6 +1,6 @@
 
  jwplayer("vplayer").setup({
-    sources: [{file:"https://images100-focus-opensocial.googleusercontent.com/gadgets/proxy?container=focus&refresh=2&url=http://www.livedoomovies.com/02_BTSPORTHD_1_720p/chunklist.m3u8"}],
+    sources: [{file:"https://32x2cn7zz29m47vnqt4z-kyz6hw.p5cdn.com/abr_PSLME/zxcv/playlist.m3u8"}],
     //hlslabels:{
     //       "1440":"1080p",
     //       "900":"720p",
