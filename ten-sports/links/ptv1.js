@@ -1,6 +1,6 @@
 
  jwplayer("vplayer").setup({
-    sources: [{file:"https://32x2cn7zz29m47vnqt4z-kyz6hw.p5cdn.com/abr_PSLME/zxcv/playlist"}],
+    sources: [{file:"http://42.201.228.226:8678/PTVSPORT_NOC_TV/tracks-v1a1/mono.m3u8"}],
     //hlslabels:{
     //       "1440":"1080p",
     //       "900":"720p",
