@@ -1,5 +1,5 @@
 jwplayer("vplayer").setup({
-    sources: [{file:"http://42.201.228.226:8678/TENSPORT_EBRAVO_MOBILE/tracks-v1a1/mono.m3u8"}],
+    sources: [{file:"http://stream.tvtap.live:8081/live/wwe.stream/chunks.m3u8"}],
     //hlslabels:{
     //       "1440":"1080p",
     //       "900":"720p",
