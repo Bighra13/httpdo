@@ -1,6 +1,6 @@
 
  jwplayer("vplayer").setup({
-    sources: [{file:"http://stream.tvtap.live:8081/live/skysports-cricket1.stream/chunks.m3u8"}],
+    sources: [{file:"http://cdn2.niazitv.pk:8080/IPL-Live-3/index.m3u8"}],
     //hlslabels:{
     //       "1440":"1080p",
     //       "900":"720p",
