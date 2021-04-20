@@ -1,6 +1,6 @@
 
  jwplayer("vplayer").setup({
-    sources: [{file:"http://stream.tvtap.live:8081/live/skysports-maineventz.stream/chunks.m3u8"}],
+    sources: [{file:"http://cdn2.niazitv.pk:8080/IPL-Live/index.m3u8"}],
     //hlslabels:{
     //       "1440":"1080p",
     //       "900":"720p",
