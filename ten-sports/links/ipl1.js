@@ -1,6 +1,6 @@
 
  jwplayer("vplayer").setup({
-    sources: [{file:"http://cdn2.niazitv.pk:8080/IPL-Live-3/index.m3u8"}],
+    sources: [{file:"https://show.streamingbd.com/hls/eflix/PA4oqzsoiRG2tWoLMseoVA/1618927565/bd_t_sports.m3u8"}],
     //hlslabels:{
     //       "1440":"1080p",
     //       "900":"720p",
