@@ -1,6 +1,6 @@
 
  jwplayer("vplayer").setup({
-    sources: [{file:"https://show.streamingbd.com/hls/eflix/PA4oqzsoiRG2tWoLMseoVA/1618927565/bd_t_sports.m3u8"}],
+    sources: [{file:"https://probashibangla-tv.telelivebd.com/linkers/tsports.stream/playlist.m3u8"}],
     //hlslabels:{
     //       "1440":"1080p",
     //       "900":"720p",
