@@ -1,6 +1,6 @@
 
  jwplayer("vplayer").setup({
-    sources: [{file:"http://cdn2.niazitv.pk:8080/IPL-Live/index.m3u8"}],
+    sources: [{file:"http://35.244.55.13/ptv/index.m3u8"}],
     //hlslabels:{
     //       "1440":"1080p",
     //       "900":"720p",
