@@ -1,6 +1,6 @@
 
  jwplayer("vplayer").setup({
-    sources: [{file:"http://35.244.55.13/ptv/index.m3u8"}],
+    sources: [{file:"http://35.244.55.13/ipl/index.m3u8"}],
     //hlslabels:{
     //       "1440":"1080p",
     //       "900":"720p",
